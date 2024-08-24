@@ -1,30 +1,31 @@
-site_title: "Ram Ghale"
-site_description: "Software Engineer and Designer"
-email: ram@ram-ghale.netlify.app
+site_title: "Pete Fowler"
+site_description: "Full Stack Software Engineer"
+email: fowler.pete@gmail.com
 socials:
-  twitter: "https://twitter.com/ramghale"
-  linkedin: "https://linkedin.com/in/ramghale"
-  github: "https://github.com/ramghale"
+    twitter: "https://twitter.com/ramghale"
+    linkedin: "https://linkedin.com/in/pete-fowler"
+    github: "https://github.com/pete-fowler"
 main:
-  headings: 
-    - "I am Ram Ghale"
-    - "Software Engineer and Designer"
-  paragraphs:
-    - "I love to build things that make a difference in people's lives. I am passionate about technology, business, and storytelling. I am always looking for new opportunities to learn and grow."
-  button:
-    text: "Get in touch"
-    link: "https://ram-ghale.netlify.app"
+    headings:
+        - "I am Pete Fowler"
+        - "Full Stack Software Engineer"
+    paragraphs:
+        - "Experienced in JavaScript, React, TypeScript, C# / .NET, and Amazon Web Services. Passionate about continuous improvement, code quality, and best practices. Names variables like they are a first-born child. Dedicated rock climber and runner from Colorado."
+    button:
+        text: "Get in touch"
+        link: "mailto:fowler.pete@gmail.com"
 
 about:
-  title: "About Me"
-  paragraphs: 
-    - "I am a strong advocate for diversity and inclusion in tech, and I am always looking for ways to give back to the community. I am a mentor, speaker, and writer. I am also a co-founder of a tech community in Nepal."
-    - "I am a lifelong learner and I am always looking for new opportunities to learn and grow. I am currently learning about entrepreneurship, business, and storytelling. I am also working on a few side projects and businesses."
+    title: "About Me"
+    paragraphs:
+        - "I am currently working as a full stack software engineer for Calance, on a team based in Boulder, Colorado. Our team primarily integrates financial data
+        between project management and accounting software for construction industry clients." 
+        - "My contributions to this team include: leading a complete rebuild of our customer facing web app, writing an OAuth 2.0 microservice and contrubiting across other microservices, taking over a line of data integrations between Procore and NetSuite, and adding new financial data integrations."
 
 get_in_touch:
-  title: "Get in touch"
-  paragraphs:
-    - "In case you would like to get in touch with me, you can always send me an email"
-  button:
-    text: "Send me an Email"
-    link: "mailto://ram@ram-ghale.netlify.app"
+    title: "Get in touch"
+    paragraphs:
+        - ""
+    button:
+        text: "Send me an Email"
+        link: "mailto://fowler.pete@gmail.com"
