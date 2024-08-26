@@ -4,7 +4,7 @@ import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
+  const blogEntries = await getCollection("projects");
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -22,10 +22,10 @@ const { email, socials } = parseSiteConfig();
 <BlogPostLayout site_title={title} site_description={description} socials={socials} email={email}>
   <main class="container">
   <h1 class="blog-title">{title}</h1>
-  <p class="attribution">
+  <!-- <p class="attribution">
     By <span class="highlight-text">{author}</span> 
     on <span class="highlight-text">{date.toDateString()}</span>
-  </p>
+  </p> -->
   <section class="content">
   <Content />
   </section>
