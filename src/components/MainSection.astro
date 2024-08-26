@@ -24,7 +24,7 @@ const { main } = Astro.props;
     {main.paragraphs.map(pText => (
         <p>{pText}</p>
     ))}
-    <Button>{main.button.text}</Button>
+    <a href={main.button.link}><Button>{main.button.text}</Button></a>
 </main>
 <style>
     small {
