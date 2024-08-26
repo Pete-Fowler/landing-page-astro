@@ -2,37 +2,37 @@
 import Link from './ui/Link.astro';
 import { getCollection } from 'astro:content';
 import BlogCard from './ui/BlogCard.astro';
-const posts = await getCollection('blog');
+const posts = await getCollection('projects');
 
 ---
 <section class="container">
     <h2>Latest Posts</h2>
-    <div class="posts-container">
+    <div class="projects-container">
         {posts.slice(0,2).map((post) => (
 
             <BlogCard post={{...post.data, slug: post.slug}}/>
         ))}
     </div>
-    <div class="view-all-blogs">
-    <Link href="/blog">View all posts</Link>
+    <div class="view-all-projects">
+    <Link href="/projects">View all projects</Link>
     </div>
 </section>
 <style>
 
 
-    div.posts-container {
+    div.projects-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
     @media screen and (max-width: 768px) {
-        div.posts-container {
+        div.projects-container {
             grid-template-columns: 1fr;
         }
     }
 
-    div.view-all-blogs {
+    div.view-all-projects {
         margin-top: 2rem;
         text-align: center;
     }
