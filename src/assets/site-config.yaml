@@ -19,7 +19,7 @@ about:
     title: "About Me"
     paragraphs:
         - "I am a full stack software engineer at Calance, on a team based in Boulder, Colorado. Our team primarily integrates financial data between project management and accounting software for construction industry clients. This is done with a number of apps in C# / .NET with a service oriented architecture deployed to Amazon Web Services."
-        - "My contributions to this team include: adding value for customers by leading a complete rebuild and upgrade of our customer facing web app, adding new financial data integrations, building new full stack applications that clients can use from within the Procore website, taking over maintenance and customer support of a line of data integrations between Procore and NetSuite, writing an OAuth 2.0 microservice and contrubiting across other microservices."
+        - "My contributions to this team include: adding value for customers by leading a complete rebuild and upgrade of our customer facing web app, adding new financial data integrations, building new full stack applications that clients can use from within the Procore website, taking over maintenance and customer support of a line of data integrations between Procore and NetSuite, writing an OAuth 2.0 microservice and contributing across other microservices."
         - "I changed careers to software development in 2022. Before this, I've demonstrated a strong ability to adapt and always continue to learn, and I've gained high level experience in team collaboration and problem solving through previous careers in journalism, private investigation, and health care."
 
 get_in_touch:
