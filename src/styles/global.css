@@ -1,3 +1,4 @@
+@import "bootstrap/dist/css/bootstrap.css";
 
 :root {
     --slate: #0c1035;
@@ -39,7 +40,7 @@ body {
 span.highlight-text {
     color: var(--primary);
     font-weight: 600;
-}   
+}
 
 body:not(.dark) {
     --background: var(--gray-light);
@@ -49,8 +50,12 @@ body:not(.dark) {
     --primary: var(--accent);
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--text-light);
     font-weight: 600;
     line-height: 1;
