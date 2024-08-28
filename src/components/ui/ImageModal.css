@@ -1,7 +1,15 @@
+.thumbnails {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .thumbnail {
-    width: 100px;
+    width: 250px;
     cursor: pointer;
     margin: 5px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 

@@ -21,6 +21,7 @@ export default function ImageModal({ images }) {
                 {images.map((image, index) => (
                     <img
                         key={index}
+                        title={image.alt}
                         src={image.src}
                         alt={image.alt}
                         className="thumbnail"
