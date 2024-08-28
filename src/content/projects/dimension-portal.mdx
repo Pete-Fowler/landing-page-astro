@@ -1,16 +1,28 @@
 ---
 title: "Dimension Portal"
 description: "Customer facing web app to configure, schedule, monitor, and run data integrations."
-author:
-date:
+author: ""
+date: ""
 ---
 
-import ImageCarousel from "../../components/ui/ImageCarousel.astro";
 import YouTubeEmbed from "../../components/ui/YouTubeEmbed.astro";
+import ExpandableImage from "../../components/ui/ExpandableImage.jsx";
+
+export const images = [
+    {
+        src: `${import.meta.env.BASE_URL}src/assets/images/review.png`,
+        alt: "Review integrations",
+    },
+    {
+        src: `${import.meta.env.BASE_URL}src/assets/images/details.png`,
+        alt: "View integration details",
+    },
+];
 
 This was a complete rebuild of our team's customer facing web app in JavaScript, TypeScript, React, C# / .NET Core, and Amazon Web Services. The old version was written in vanilla JavaScript and C# / .NET Framework with the Nancy web framework. Features include configuring, scheduling, running, and monitoring data integrations, as well as manually linking and unlinking specific records.
 
 No proprietary data is shown for this demo/mock company.
 
-<ImageCarousel />
-<YouTubeEmbed videoId="2IV3T1Egr9I" width="450" />
+<ExpandableImage images={images} client:load />
+<br />
+<YouTubeEmbed videoId="2IV3T1Egr9I" />
