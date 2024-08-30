@@ -2,13 +2,14 @@
 import Link from './ui/Link.astro';
 import { getCollection } from 'astro:content';
 import ProjectCard from './ui/ProjectCard.astro';
-const posts = await getCollection('projects');
+const projects = await getCollection('projects');
 
 ---
 <section class="container">
     <h2>Recent Projects</h2>
     <div class="projects-container">
-        {posts.slice(0,2).map((post) => (
+        {projects.sort((a, b) => a.data.order - b.data.order)
+            .slice(0,2).map((post) => (
 
             <ProjectCard post={{...post.data, slug: post.slug}}/>
         ))}

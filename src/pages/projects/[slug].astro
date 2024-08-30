@@ -4,8 +4,11 @@ import SubLayout from "../../layouts/SubLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("projects");
-  return blogEntries.map((entry) => ({
+  const projects = await getCollection("projects");
+
+  projects.sort((a, b) => a.data.order - b.data.order);
+
+  return projects.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));

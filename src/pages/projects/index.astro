@@ -5,14 +5,15 @@ import { getCollection } from 'astro:content';
 import { parseSiteConfig } from "../../config";
 import ProjectCard from "../../components/ui/ProjectCard.astro";
 
-const posts = await getCollection('projects');
+const projects = await getCollection('projects');
 const { site_title, site_description, email, socials } = parseSiteConfig();
 
 ---
 <Layout site_title={"Projects | " + site_title} site_description={site_description} email={email} socials={socials}>
     <main class="container">
         <h1>Projects</h1>
-        {posts.map((post) => (
+        {projects.sort((a, b) => a.data.order - b.data.order)
+                .map((post) => (
                 <ProjectCard post={{ ...post.data, slug: post.slug}}/>
         ))}
         </main>
