@@ -21,6 +21,7 @@ const { about } = Astro.props;
     </div>
     <div class="image-container">
         <Image
+            class="image"
             src={dpImage}
             alt="Pete Fowler"
             height={250}
@@ -48,5 +49,9 @@ const { about } = Astro.props;
         padding-top: 4rem;
         display: flex;
         justify-content: center;
+    }
+
+    .image {
+        border-radius: 5px;
     }
 </style>
