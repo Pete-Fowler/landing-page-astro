@@ -33,13 +33,14 @@ const { post } = Astro.props;
 
     article {
         margin-top: 1.5rem;
-        box-shadow: 0 0 2px var(--text););
+        box-shadow: 0 0 2px var(--text);
         border-radius: 0.25rem;
+        border: 1px solid var(--accent-alt);
         padding: 1rem;
     }
 
     article:hover {
-        box-shadow: 0 0 2px var(--primary);
+        box-shadow: 0 0 2px 2px var(--primary);
         transition: all 0.3s;
     }
 
