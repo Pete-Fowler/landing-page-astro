@@ -3,14 +3,19 @@ title: "New data integrations"
 description: "Created new data integrations "
 author: ""
 date: ""
+order: 20
 ---
+
+import { Image } from "astro:assets";
+import procore from "/src/assets/images/procore.png";
+import seattle from "/src/assets/images/seattle.png";
 
 <br />
 
 ## Procore - NetSuite
 
-    <img
-        src="/src/assets/images/procore.png"
+    <Image
+        src={procore}
         alt="foo"
         style={{
             float: "left",
@@ -24,8 +29,8 @@ I've taken on the new responsibility of being the primary developer and customer
 
 ## City of Seattle{" "}
 
-<img
-    src="/src/assets/images/seattle.png"
+<Image
+    src={seattle}
     alt="City of Seattle"
     style={{
         float: "right",

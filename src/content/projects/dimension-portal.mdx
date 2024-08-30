@@ -3,30 +3,37 @@ title: "Dimension web portal"
 description: "Customer facing web app to configure, schedule, monitor, and run data integrations."
 author: ""
 date: ""
+order: 10
 ---
 
 import YouTubeEmbed from "../../components/ui/YouTubeEmbed.astro";
 import ExpandableImage from "../../components/ui/ExpandableImage.jsx";
+import { Image } from "astro:assets";
+import review from "/src/assets/images/review.png";
+import details from "/src/assets/images/details.png";
+import editSchedule from "/src/assets/images/edit-schedule.png";
+import messageSearch from "/src/assets/images/message-search.png";
+import createTicket from "/src/assets/images/create-ticket.png";
 
 export const images = [
     {
-        src: `${import.meta.env.BASE_URL}src/assets/images/review.png`,
+        src: review.src,
         alt: "Review integrations",
     },
     {
-        src: `${import.meta.env.BASE_URL}src/assets/images/details.png`,
+        src: details.src,
         alt: "View integration details",
     },
     {
-        src: `${import.meta.env.BASE_URL}src/assets/images/edit-schedule.png`,
+        src: editSchedule.src,
         alt: "Edit schedules",
     },
     {
-        src: `${import.meta.env.BASE_URL}src/assets/images/message-search.png`,
+        src: messageSearch.src,
         alt: "Message details search",
     },
     {
-        src: `${import.meta.env.BASE_URL}src/assets/images/create-ticket.png`,
+        src: createTicket.src,
         alt: "Create support ticket and view existing tickets",
     },
 ];
