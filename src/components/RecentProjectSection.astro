@@ -1,7 +1,7 @@
 ---
 import Link from './ui/Link.astro';
 import { getCollection } from 'astro:content';
-import BlogCard from './ui/BlogCard.astro';
+import ProjectCard from './ui/ProjectCard.astro';
 const posts = await getCollection('projects');
 
 ---
@@ -10,7 +10,7 @@ const posts = await getCollection('projects');
     <div class="projects-container">
         {posts.slice(0,2).map((post) => (
 
-            <BlogCard post={{...post.data, slug: post.slug}}/>
+            <ProjectCard post={{...post.data, slug: post.slug}}/>
         ))}
     </div>
     <div class="view-all-projects">
