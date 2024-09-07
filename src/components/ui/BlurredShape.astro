@@ -21,3 +21,31 @@
         
     }
 </style>
+
+<script>
+    const blurredShape = document.querySelector('.blurred-shape');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let shapeX = 0;
+    let shapeY = 0;
+    const easing = 0.05; 
+
+    document.addEventListener('mousemove', (event) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+    });
+
+
+    function animate() {
+        shapeX += (mouseX - shapeX) * easing;
+        shapeY += (mouseY - shapeY) * easing;
+
+        blurredShape.style.transform = `translate(${shapeX}px, ${shapeY}px)`;
+        
+        requestAnimationFrame(animate); 
+    }
+
+    animate(); 
+
+</script>
