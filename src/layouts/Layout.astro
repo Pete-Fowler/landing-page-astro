@@ -35,3 +35,18 @@ const { site_title, site_description, email, socials } = Astro.props;
 		<Footer/>
 	</body>
 </html>
+
+<script>
+    window.addEventListener('load', () => {
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (event) => {
+            const cursorX = event.clientX + window.scrollX;
+            const cursorY = event.clientY + window.scrollY;
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+        });
+    });
+</script>

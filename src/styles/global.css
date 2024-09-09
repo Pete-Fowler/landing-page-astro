@@ -23,6 +23,31 @@ body {
     color: var(--text);
     margin: 0;
     font-size: 1.1rem;
+    min-height: 100vh;
+}
+
+body,
+button,
+a,
+input,
+textarea,
+select,
+button:hover,
+a:hover {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--accent-alt);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: scale 0.3s;
+    z-index: 9999;
+    box-shadow: 0 0 10px 2px var(--accent-alt);
 }
 
 .container {
