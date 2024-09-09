@@ -25,7 +25,6 @@
 <script>
     const blurredShape = document.querySelector('.blurred-shape');
 
-    // Get the initial bounding rectangle of the shape
     const shapeRect = blurredShape.getBoundingClientRect();
     const initialX = shapeRect.left + window.scrollX + (shapeRect.width / 2);
     const initialY = shapeRect.top + window.scrollY + (shapeRect.height / 2);
@@ -35,20 +34,16 @@
     let currentX = initialX;
     let currentY = initialY;
 
-    const easing = 0.02; // Easing factor for smooth movement
-
-    // Mouse move handler to update target positions
+    const easing = 0.01; 
     document.addEventListener('mousemove', (event) => {
         targetX = event.clientX;
         targetY = event.clientY;
     });
 
-    // Animation loop to smoothly move towards the target
     function animate() {
         currentX += (targetX - currentX) * easing;
         currentY += (targetY - currentY) * easing;
 
-        // Apply translation based on current position
         blurredShape.style.transform = `translate(${currentX - initialX}px, ${currentY - initialY}px)`;
 
         requestAnimationFrame(animate);
