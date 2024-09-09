@@ -8,9 +8,9 @@
         border-radius: 50%;
         filter: blur(100px);
         opacity: 0.5;
-        top:20%;
-        left: 0%;
-        transform: translate(-50%, -50%);
+        top:0%;
+        left: -15%;
+        transition: transform 0.1s ease-out;
     }
 
     @media screen and (max-width: 768px) {
@@ -23,29 +23,41 @@
 </style>
 
 <script>
-    const blurredShape = document.querySelector('.blurred-shape');
+    window.addEventListener('load', () => {
+        const blurredShape = document.querySelector('.blurred-shape');
 
-    let mouseX = 0;
-    let mouseY = 0;
-    let shapeX = 0;
-    let shapeY = 0;
-    const easing = 0.05; 
+        const setInitialPosition = () => {
+            const shapeRect = blurredShape.getBoundingClientRect();
+            const initialX = shapeRect.left + window.scrollX + (shapeRect.width / 2);
+            const initialY = shapeRect.top + window.scrollY + (shapeRect.height / 2);
+            
+            blurredShape.style.transform = `translate(${initialX}px, ${initialY}px)`;
+            return { initialX, initialY };
+        };
 
-    document.addEventListener('mousemove', (event) => {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
+        const { initialX, initialY } = setInitialPosition();
+
+        let targetX = initialX;
+        let targetY = initialY;
+        let currentX = initialX;
+        let currentY = initialY;
+
+        const easing = 0.02; 
+
+        document.addEventListener('mousemove', (event) => {
+            targetX = event.clientX;
+            targetY = event.clientY;
+        });
+
+        function animate() {
+            currentX += (targetX - currentX) * easing;
+            currentY += (targetY - currentY) * easing;
+
+            blurredShape.style.transform = `translate(${currentX - initialX}px, ${currentY - initialY}px)`;
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
     });
-
-
-    function animate() {
-        shapeX += (mouseX - shapeX) * easing;
-        shapeY += (mouseY - shapeY) * easing;
-
-        blurredShape.style.transform = `translate(${shapeX}px, ${shapeY}px)`;
-        
-        requestAnimationFrame(animate); 
-    }
-
-    animate(); 
-
 </script>
