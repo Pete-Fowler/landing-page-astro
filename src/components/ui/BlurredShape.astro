@@ -10,7 +10,6 @@
         opacity: 0.5;
         top:0%;
         left: -15%;
-        transition: transform 0.1s ease-out;
     }
 
     @media screen and (max-width: 768px) {
@@ -23,41 +22,36 @@
 </style>
 
 <script>
-    window.addEventListener('load', () => {
-        const blurredShape = document.querySelector('.blurred-shape');
+    const blurredShape = document.querySelector('.blurred-shape');
 
-        const setInitialPosition = () => {
-            const shapeRect = blurredShape.getBoundingClientRect();
-            const initialX = shapeRect.left + window.scrollX + (shapeRect.width / 2);
-            const initialY = shapeRect.top + window.scrollY + (shapeRect.height / 2);
-            
-            blurredShape.style.transform = `translate(${initialX}px, ${initialY}px)`;
-            return { initialX, initialY };
-        };
+    // Get the initial bounding rectangle of the shape
+    const shapeRect = blurredShape.getBoundingClientRect();
+    const initialX = shapeRect.left + window.scrollX + (shapeRect.width / 2);
+    const initialY = shapeRect.top + window.scrollY + (shapeRect.height / 2);
 
-        const { initialX, initialY } = setInitialPosition();
+    let targetX = initialX;
+    let targetY = initialY;
+    let currentX = initialX;
+    let currentY = initialY;
 
-        let targetX = initialX;
-        let targetY = initialY;
-        let currentX = initialX;
-        let currentY = initialY;
+    const easing = 0.02; // Easing factor for smooth movement
 
-        const easing = 0.02; 
-
-        document.addEventListener('mousemove', (event) => {
-            targetX = event.clientX;
-            targetY = event.clientY;
-        });
-
-        function animate() {
-            currentX += (targetX - currentX) * easing;
-            currentY += (targetY - currentY) * easing;
-
-            blurredShape.style.transform = `translate(${currentX - initialX}px, ${currentY - initialY}px)`;
-
-            requestAnimationFrame(animate);
-        }
-
-        animate();
+    // Mouse move handler to update target positions
+    document.addEventListener('mousemove', (event) => {
+        targetX = event.clientX;
+        targetY = event.clientY;
     });
+
+    // Animation loop to smoothly move towards the target
+    function animate() {
+        currentX += (targetX - currentX) * easing;
+        currentY += (targetY - currentY) * easing;
+
+        // Apply translation based on current position
+        blurredShape.style.transform = `translate(${currentX - initialX}px, ${currentY - initialY}px)`;
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
 </script>
