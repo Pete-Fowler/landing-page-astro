@@ -32,6 +32,8 @@ a,
 input,
 textarea,
 select,
+img,
+div#player,
 button:hover,
 a:hover {
     cursor: none !important;

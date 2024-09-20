@@ -48,5 +48,16 @@ const { site_title, site_description, email, socials } = Astro.props;
             cursor.style.left = `${cursorX}px`;
             cursor.style.top = `${cursorY}px`;
         });
+
+		const iframe = document.querySelector('.iframe-box iframe');
+        iframe?.addEventListener('mouseenter', () => {
+            cursor.style.display = 'none'; 
+        });
+
+        iframe?.addEventListener('mouseleave', () => {
+            cursor.style.display = 'block'; 
+        });
     });
+
+
 </script>
