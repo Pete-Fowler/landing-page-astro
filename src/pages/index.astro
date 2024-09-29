@@ -4,6 +4,7 @@ import MainSection from "../components/MainSection.astro";
 import AboutSection from "../components/AboutSection.astro"
 import RecentProjectSection from "../components/RecentProjectSection.astro";
 import GetInTouch from "../components/GetInTouch.astro";
+import Footer from "../layouts/components/Footer.astro";
 import { parseSiteConfig } from "../config";
 
 const { site_title, site_description, email, socials, main, about, get_in_touch} = parseSiteConfig();
@@ -13,4 +14,5 @@ const { site_title, site_description, email, socials, main, about, get_in_touch}
 	<AboutSection about={about}/>
 	<RecentProjectSection/>
 	<GetInTouch get_in_touch={get_in_touch}/>
+	<Footer/>
 </Layout>
