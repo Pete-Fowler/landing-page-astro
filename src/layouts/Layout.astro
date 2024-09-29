@@ -18,7 +18,6 @@ interface Props {
 
 const { site_title, site_description, email, socials } = Astro.props;
 
-// TODO: Add the left and right social, email menus (not on mobile)
 ---
 
 <!DOCTYPE html>
@@ -30,8 +29,12 @@ const { site_title, site_description, email, socials } = Astro.props;
 	</head>
 	<body class="dark">
 		<Navbar/>
-		<slot />
-		<SideFrameNav email={email} socials={socials}/>
+		<main>
+			<slot />
+		</main>
+		<nav>
+			<SideFrameNav email={email} socials={socials}/>
+		</nav>
 	</body>
 </html>
 
