@@ -37,6 +37,13 @@ const { email, socials } = Astro.props;
 		align-items: center
 	}
 
+	nav.socials a:hover {
+		color: var(--text-dark);
+		transform: scale(1.2);
+		border: 1px solid var(--primary);
+		transition: all 0.3s;
+	}
+
 
 	nav.email {
 		position: fixed;
@@ -46,6 +53,12 @@ const { email, socials } = Astro.props;
 		rotate: 270deg;
 		padding-left: 2rem;
 		border-left: 0.5rem solid var(--accent-alt);
+	}
+
+	nav.email:hover {
+		color: var(--primary);
+		transform: scale(1.1);
+		transition: all 0.3s;
 	}
 
 	@media screen and (max-width: 960px) {

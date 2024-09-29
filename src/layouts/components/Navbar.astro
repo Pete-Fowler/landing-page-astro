@@ -31,10 +31,12 @@ import ThemeIcon from "./ThemeIcon.astro"
         font-size: 1.2rem;
         font-weight: 600;
         line-height: 1.2rem;
+        display: inline-block;
     }
 
     nav a:hover {
         color: var(--text-dark);
+        transform: scale(1.2);
         transition: all 0.3s;
     }
 
@@ -51,7 +53,7 @@ import ThemeIcon from "./ThemeIcon.astro"
     }
 
     div.logo > a:hover {
-        scale: 1.2;
+        transform: scale(1.2);
         color: var(--primary);
         transition: all 0.3s;
     }

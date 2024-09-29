@@ -5,17 +5,35 @@
     </svg>
   </button>
   <style>
-    #themeToggle {
-      border: 0;
-      background: none;
-    }
-    .sun { fill: var(--text); }
-    .moon { fill: transparent; }
-  
-    :global(.dark) .sun { fill: transparent; }
-    :global(.dark) .moon { fill: var(--text); }
-  </style>
+   #themeToggle {
+    border: 0;
+    background: none;
+    display: inline-block;
+  }
 
+  #themeToggle svg:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+  }
+
+  .sun {
+    fill: var(--text);
+    transition: all 0.3s ease;
+  }
+  
+  .moon {
+    fill: transparent;
+    transition: all 0.3s ease;
+  }
+
+  :global(.dark) .sun {
+    fill: transparent;
+  }
+
+  :global(.dark) .moon {
+    fill: var(--text);
+  }
+  </style>
 
 <script is:inline>
   const theme = (() => {
