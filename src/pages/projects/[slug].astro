@@ -1,6 +1,6 @@
 ---
 import { parseSiteConfig } from "../../config";
-import SubLayout from "../../layouts/ProjectLayout.astro";
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -22,7 +22,7 @@ const { email, socials } = parseSiteConfig();
 
 ---
 
-<SubLayout site_title={title} site_description={description} socials={socials} email={email}>
+<ProjectLayout site_title={title} site_description={description} socials={socials} email={email}>
   <main class="container">
   <h1 class="title">{title}</h1>
   <!-- <p class="attribution">
@@ -33,7 +33,7 @@ const { email, socials } = parseSiteConfig();
   <Content />
   </section>
 </main>
-</SubLayout>
+</ProjectLayout>
 <style>
   p.attribution {
     font-size: 0.9rem;
