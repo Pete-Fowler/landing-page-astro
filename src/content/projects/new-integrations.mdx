@@ -8,7 +8,7 @@ order: 20
 
 import { Image } from "astro:assets";
 import procore from "/src/assets/images/procore.png";
-import seattle from "/src/assets/images/seattle.png";
+import parks from "/src/assets/images/parks.jpg";
 
 <br />
 
@@ -25,16 +25,17 @@ import seattle from "/src/assets/images/seattle.png";
         }}
     />
 
-I've taken on the new responsibility of being the primary developer and customer support person for Calance's Procore NetSuite ERP integrations. This line of integrations currently has around 20 clients. I expanded the functionality by adding new C# / .NET integrations to send owner invoices from Procore to NetSuite, as well as subcontractor invoices and payments.
+I've taken on the new responsibility of being the primary developer, product manager, and customer support person for Calance's Procore NetSuite ERP integrations. This line of integrations currently has around 20 clients. I expanded the functionality by adding new C# / .NET integrations to send owner invoices from Procore to NetSuite, as well as subcontractor invoices, payments, commitments, and commitment change orders.
 
-## City of Seattle{" "}
+## Major Metroplitan City{" "}
 
 <Image
-    src={seattle}
-    alt="City of Seattle"
+    src={parks}
+    alt="Parks and Recreaction Department"
     style={{
         float: "right",
-        width: "125px",
+        width: "250px",
+        height: "auto",
         marginLeft: "20px",
         position: "relative",
         top: "10px",
@@ -42,6 +43,6 @@ I've taken on the new responsibility of being the primary developer and customer
 
 />
 
-I am currently helping the City of Seattle Parks and Recreation department automate their subcontractor invoice process. This involves listening for webhooks from Procore and programatically generating an Excel spreadsheet from data within Procore and then converting it to a .pdf called a pay estimate form.
+I helped the parks and recreation department of a major metropolitan city automate their subcontractor invoice process. This involves listening for webhooks from Procore and programatically generating an Excel spreadsheet from data within Procore and then converting it to a .pdf called a pay estimate form. I also set up webhook handling and integrations to update project custom fields in Procore with certain calculated data from the pay estimate form.
 
-The next phase of planned work will be to create a full stack web app with React, TypeScript, and C# / .NET Core that will run as an iFrame embedded within the Procore website. This app will allow the city's subcontractors to fill out 3 different types of forms. The data will be stored in Amazon Web Services DynamoDB, and later read and added to the pay estimate form.
+The next phase of planned work will be to create a full stack web app with React, TypeScript, and C# / .NET Core that will run as an iFrame embedded within the Procore website. This app will allow the city's subcontractors to fill out and sign various forms. The data will be stored in Amazon Web Services DynamoDB, and later read and added to the pay estimate form.
