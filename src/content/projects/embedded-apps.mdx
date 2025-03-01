@@ -1,6 +1,6 @@
 ---
-title: "Embedded apps"
-description: "Created full stack applications embedded within Procore"
+title: "Embedded app"
+description: "Created full stack application embedded within Procore"
 author: ""
 date: ""
 order: 30
@@ -9,3 +9,7 @@ order: 30
 ## Budget Forecast by Cost Code
 
 I recently created a full stack web app that is embedded within the Procore website as an iFrame using JavaScript, TypeScript, React, C# / .NET, and Amazon Web Services DynamoDB. This app was developed for clients that want to see budget forecasts by cost code and edit the forecasted amounts as well as notes, which is not possible in Procore natively.
+
+The app is secured by an OAuth 2.0 flow with the user's Procore credentials and uses a short lived Json Web Token. features a table with columns for things like cost code, description, forecasted amount, notes. Rows are grouped by cost code with expandable grouping rows. The user can edit the forecasted amount and notes for each cost code. It includes a button to save the changes to the database and a button to refresh the data in the table.
+
+The greatest challenges were working with the client to understand the business requirements and calculations, as well as implementing authentication in the context of a separate popup window for logging in to Procore, and having the web app offload as much of the authentication flow as possible to an OAuth microservice that I created.
