@@ -5,6 +5,7 @@ interface Props {
         date: string;
         author: string;
         slug: string;
+        description: string;
     };
 }
 
@@ -22,6 +23,7 @@ const { post } = Astro.props;
         </p>
         <h3 class="title">{post.title}</h3>
         <p class="author">{post.author}</p>
+        <p class="description">{post.description}</p>
     </article>
 </a>
 <style>
